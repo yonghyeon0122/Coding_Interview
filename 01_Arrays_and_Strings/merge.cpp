@@ -9,3 +9,15 @@
 #include <iostream>
 #include <string>
 #include <vector>
+using namespace std;
+
+vector<string> merge(vector<string>& words, vector<string>& more){
+
+    vector<string> sentence; // Define a new vector to return
+    for(const string w: words) // Push the original part
+        sentence.push_back(w);
+    for(const string m: more) // Push the additional part
+        sentence.push_back(m);
+
+    return sentence;
+}
